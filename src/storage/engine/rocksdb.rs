@@ -127,6 +127,7 @@ impl Debug for EngineRocksdb {
     }
 }
 
+// sgon: rocksdb异步写入修改
 fn write_modifies(db: &DB, modifies: Vec<Modify>) -> Result<()> {
     let wb = WriteBatch::new();
     for rev in modifies {
